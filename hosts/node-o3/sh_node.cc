@@ -17,10 +17,13 @@
  */
 #define CANVAS_USE_JPEG
 #define O3_NODE
+#define O3_V8
 //#define O3_V8_GLUE
+#include <node.h>
 #include <v8.h>
 #include <o3.h>
 #include <js/js.h>
+#include <fs/fs.h>
 //#include <buffer/buffer.h>
 #include <xml/xml.h>
 #include <fastxml/fastxml.h>
@@ -49,6 +52,7 @@ init (Handle<Object> target)
 
   o3_add_extraits(cFastXml);
   o3_add_extraits(cXml);
+//  o3_add_extraits(cFs);
 //  o3_add_extraits(cCanvas);		
   
 // TODO: merge these two
@@ -61,3 +65,6 @@ init (Handle<Object> target)
   
 }
 
+extern "C" {
+  NODE_MODULE(o3, init);
+};

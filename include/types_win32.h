@@ -21,7 +21,7 @@
 #include <stddef.h>
 
 namespace o3 {
-
+#ifndef O3_V8
 typedef __int8 int8_t;
 typedef __int16 int16_t;
 typedef __int32 int32_t;
@@ -37,7 +37,7 @@ typedef _w64 unsigned __int32 uintptr_t;
 
 typedef ::ptrdiff_t ptrdiff_t;
 //typedef ::size_t size_t;
-
+#endif
 }
 
 #endif // O3_TYPES_WIN32_H

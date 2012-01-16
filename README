@@ -16,6 +16,14 @@ distribution for details.
   ==============
 
   *TODO*
+  
+  Building For Node on Windows
+  ===============================
+  1. Make sure you have VS2010 installed (the same version as the official binaries use, if possible)
+  2. Open a "Visual Studio 2010 command prompt"
+  3. Type "set NodePath=C:\Path\to\node", adjusting the path according to your system
+  4. Type vcbuild
+  5. Enjoy!
 
   Supported Operating Systems
   ================================
